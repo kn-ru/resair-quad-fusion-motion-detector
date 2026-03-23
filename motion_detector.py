@@ -506,8 +506,8 @@ def draw_results(frame, boats, wakes, wake_scores, flow_scores, traj_scores,
 # ─────────────────── Главный пайплайн ───────────────────────────────────
 def main():
     parser = argparse.ArgumentParser(description="Triple Fusion Motion Detector")
-    parser.add_argument("--video", type=str, required=True, help="Путь к видео")
-    parser.add_argument("--weights", type=str, required=True, help="Путь к весам YOLOv9")
+    parser.add_argument("--video", type=str, default="test.mp4", help="Путь к видео")
+    parser.add_argument("--weights", type=str, default="best.pt", help="Путь к весам YOLOv9")
     parser.add_argument("--conf", type=float, default=0.3, help="Confidence threshold для YOLO")
     parser.add_argument("--output", type=str, default=None, help="Путь к выходному видео")
     parser.add_argument("--show", action="store_true", help="Показывать в реальном времени")
